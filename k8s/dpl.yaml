@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: azuret4
+  # namespace: default
+  labels:
+    app: azuret4
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: azuret4
+  template:
+    metadata:
+      labels:
+        app: azuret4
+    spec:
+      containers:
+      - name: azuret4
+        image: 280507/azuret4:v1
+        ports:
+        - containerPort: 80
