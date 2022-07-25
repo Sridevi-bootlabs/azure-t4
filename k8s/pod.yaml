@@ -9,4 +9,4 @@ spec:
   - name: azuret4
     image: 280507/azuret4:v1
     ports:
-    - containerPort:  
+    - containerPort: 3000
