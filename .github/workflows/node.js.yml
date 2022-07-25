@@ -29,6 +29,9 @@ jobs:
     - run: npm install -g npm@latest
     - run: rm -rf node_modules
     - run: npm install
+    - name: minikube start
+      run: 
+         minikube start
     - run : kubectl apply -f pod.yaml
     - run : kubectl apply -f svc.yaml  
     - run : kubectl apply -f dpl.yaml 
